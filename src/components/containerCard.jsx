@@ -1,0 +1,93 @@
+import React, { useEffect } from "react";
+import { Box, CircularProgress, Typography } from "@mui/material";
+import Cards from "./Cards";
+import useTax from "../hooks/useTax";
+import WhatSapp from "../views/whatSapp";  
+
+export default function ContainerCard() {
+  const { products, getDocument, loading, category, getTitle } = useTax();
+
+  useEffect(() => {
+    if (category) {
+      getDocument(category);
+    }
+  }, [category, getDocument]);
+
+  return (
+    <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      width: "98vw",
+      marginBottom: "30px",
+      minHeight: "80vh", 
+      paddingBottom: "50px", 
+    }}
+  >
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: 2,
+          gap: 2,
+        }}
+      >
+        <Box
+          sx={{
+            width: "50px",
+            height: "2px",
+            backgroundColor: "yellow",
+          }}
+        />
+        <Typography variant="h4" sx={{ textAlign: "center", mb:"10px" }}>
+          {getTitle()}
+        </Typography>
+        <Box
+          sx={{
+            width: "50px",
+            height: "2px",
+            backgroundColor: "yellow",
+          }}
+        />
+      </Box>
+
+      <Box
+        sx={{
+          flex: "1 0 auto",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: 2,
+          padding: 2,
+        
+          "@media (max-width: 567px)": {
+            flexDirection: "column",
+          },
+        }}
+      >
+        {loading ? (
+          <CircularProgress
+            sx={{ margin: "auto", display: "block", color: "yellow" }}
+          />
+        ) : products.length > 0 ? (
+          products.map((item) => (
+            <Cards
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              nombre={item.nombre}
+              precio={item.precio}
+              descripcion={item.descripcion}
+              collectionName={category}
+            />
+          ))
+        ) : (
+          <Typography variant="h6">No se encontraron productos</Typography>
+        )}
+      </Box>
+      <WhatSapp />
+    </Box>
+  );
+}

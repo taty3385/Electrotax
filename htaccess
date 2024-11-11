@@ -1,0 +1,15 @@
+AddType application/javascript .js
+
+
+Options -MultiViews
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteRule ^ index.html [QSA,L]
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE image/jpeg image/png image/svg+xml
+</IfModule>
