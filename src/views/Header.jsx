@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -38,22 +36,27 @@ export default function Header() {
         height: "130px",
         backgroundColor: "rgb(255, 243, 43)",
         display: "flex",
-        flexDirection: "column", 
-        justifyContent: "center", 
+        flexDirection: { xs: "column", md: "row" },
+        justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Container maxWidth="xl">
+      <Container
+        sx={{
+          display:"flex", 
+       
+          flexDirection: { md: "column", sm: "row" },
+        }}
+      >
         <Box
           sx={{
             display: "flex",
-            flexDirection: "column", 
-            alignItems: "center", 
-            justifyContent: "center", 
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
             textAlign: "center",
-            paddingBottom: "3px", 
-            width: "100%", 
-   
+            paddingBottom: "3px",
+            width: "100%",
           }}
           onClick={() => navigate("/")}
         >
@@ -61,7 +64,7 @@ export default function Header() {
             <FaCar
               size={30}
               style={{
-                marginRight: "10px", 
+                marginRight: "10px",
                 color: "black",
               }}
             />
@@ -73,7 +76,7 @@ export default function Header() {
                 letterSpacing: ".3rem",
                 color: "black",
                 textDecoration: "none",
-                fontSize: { xs: "1.2rem", md: "1.6rem" },
+                fontSize: { xs: "1.5rem", md: "1.6rem" },
               }}
             >
               Electrotax
@@ -84,7 +87,7 @@ export default function Header() {
             variant="body2"
             sx={{
               color: "black",
-              fontSize: { xs: "0.8rem", md: "1rem" },
+              fontSize: { xs: "1.3rem", md: "1rem" },
             }}
           >
             Relojería de taxi/ Mecanica gral.
@@ -108,8 +111,8 @@ export default function Header() {
               onClick={(e) => setAnchorElNav(e.currentTarget)}
               color="inherit"
               sx={{
-                marginRight: { xs: "auto", md: 0 }, 
-                justifyContent: { md: "flex-end" }, 
+                marginRight: { xs: "auto", md: 0 },
+                justifyContent: { md: "flex-end" },
               }}
             >
               <MenuIcon sx={{ color: "black" }} />
@@ -197,6 +200,7 @@ export default function Header() {
                 textDecoration: "none",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
+                outline: "none",
                 "&:hover": {
                   color: "white",
                   "&::after": {
@@ -223,6 +227,7 @@ export default function Header() {
                 textDecoration: "none",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
+                outline: "none",
                 "&:hover": {
                   color: "white",
                   "&::after": {
@@ -249,6 +254,7 @@ export default function Header() {
                 textDecoration: "none",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
+                outline: "none",
                 "&:hover": {
                   color: "white",
                   "&::after": {
@@ -275,6 +281,7 @@ export default function Header() {
                 textDecoration: "none",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
+                outline: "none",
                 "&:hover": {
                   color: "white",
                   "&::after": {
@@ -301,6 +308,7 @@ export default function Header() {
                 textDecoration: "none",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
+                outline: "none",
                 "&:hover": {
                   color: "white",
                   "&::after": {

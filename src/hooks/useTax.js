@@ -9,9 +9,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 
 
-
-
-
 export default function useTax() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -20,6 +17,7 @@ export default function useTax() {
   const [product, setProduct] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [open, setOpen] = useState(false);
+  const {  collectionName } = useParams();
  
 
   const [formData, setFormData] = useState({
@@ -197,6 +195,15 @@ const initializeMap = (container) => {
   return newMap;
 };
 
+const backgroundImage =
+   productDetail && productDetail.image ? `url(${productDetail.image})` : "";
+  const isServiceCategory = collectionName === "Servicio" || collectionName === "aboutus";
+  console.log(isServiceCategory)
+
+  const isElectricidadAutomotor =
+    productDetail?.category?.trim() === "Electricidad automotor";
+  const textColor = isServiceCategory ? "#fff" : "white";
+
  
   return {
     products,
@@ -216,6 +223,11 @@ const initializeMap = (container) => {
     errorMessage, 
     handleClose,
     open,
+    backgroundImage,
+    isServiceCategory,
+    isElectricidadAutomotor,
+    collectionName,
+    textColor,
   };
 }
 

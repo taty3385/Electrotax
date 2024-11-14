@@ -16,6 +16,7 @@
     "@mui/material": "^5.15.21",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@react-google-maps/api": "^2.19.3",
+    "animejs": "^3.2.2",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",

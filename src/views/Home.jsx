@@ -157,28 +157,37 @@ export default function Home() {
           </Typography>
         </Box>
       </Box>
+    
 
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-around",
           alignItems: "center",
-          gap: "2rem",
+
           marginTop: "2rem",
           width: "100%",
         }}
       >
-        <Box sx={{ width: { xs: "90%", sm: "45%" } }}>
+        <Box
+          sx={{
+            width: { xs: "80%", sm: "80%", md:"50%" },
+            minHeight: "500px",
+            height: "300px",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <CardMedia
             component="img"
-            width="100%"
-            height="450"
+            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
             image={taller}
             alt="Taller"
           />
         </Box>
-        <Box sx={{ width: { xs: "90%", sm: "45%", paddingRigth: "5px" } }}>
+
+        <Box sx={{ width: { xs: "80%", md: "45%" }, paddingRight: "3px" }}>
           <Typography
             variant="h4"
             sx={{
@@ -237,7 +246,7 @@ export default function Home() {
           color="black"
           variant="h5"
           gutterBottom
-          sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" }, pt: "1rem" }} // Agrega margen superior aquí
+          sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" }, pt: "1rem" }} 
         >
           Las marcas que trabajamos
         </Typography>
@@ -272,7 +281,11 @@ export default function Home() {
           color="white"
           variant="h5"
           gutterBottom
-          sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" }, pt:"0.5rem",pb:"1rem" }}
+          sx={{
+            fontSize: { xs: "1.2rem", sm: "1.5rem" },
+            pt: "0.5rem",
+            pb: "1rem",
+          }}
         >
           Lo que dicen nuestros clientes
         </Typography>
@@ -290,10 +303,11 @@ export default function Home() {
               <Box
                 key={index}
                 sx={{
-                  width: { xs: "100%", sm: "45%", md: "30%" },
-
+                  width: { xs: "70%", sm: "45%", md: "30%" },
+                  padding:"5px",
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   textAlign: "center",
+                  borderRadius:"7px"
                 }}
               >
                 <StarRatings
@@ -320,6 +334,7 @@ export default function Home() {
                 >
                   {comment.author}
                 </Typography>
+               
               </Box>
             ))}
         </Box>
@@ -338,7 +353,7 @@ export default function Home() {
                 display: "flex",
                 alignItems: "center",
                 marginBottom: "30px",
-                marginTop:"10px"
+                marginTop: "10px",
               }}
               onClick={() => setShowAll(!showAll)}
             >

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -24,13 +23,12 @@ const Contact = () => {
   return (
     <Box
       sx={{
-        minWidth: "98vw", 
+        minWidth: "98vw",
         display: "flex",
         flexDirection: "column",
-       
       }}
     >
-        <Box
+      <Box
         sx={{
           position: "relative",
           height: "200px",
@@ -43,7 +41,7 @@ const Contact = () => {
           clipPath: "ellipse(70% 80% at 50% 50%)",
           marginBottom: "2rem",
           width: "100% ",
-          padding:0
+          padding: 0,
         }}
       >
         <Typography
@@ -66,9 +64,9 @@ const Contact = () => {
           gap: 4,
           marginBottom: 4,
           width: "80%",
-          justifyContent: "center", 
-          alignItems: "center", 
-          margin: "0 auto", 
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "0 auto",
         }}
       >
         {[
@@ -100,17 +98,15 @@ const Contact = () => {
               borderRadius: 2,
               boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
               backgroundColor: "#f9f9f9",
-              width: "100%", 
+              width: "100%",
             }}
           >
             {/* Ícono al lado del label */}
-            <Box sx={{ marginRight: 2 , color:"black"}}>
-              {contact.icon}
-            </Box>
+            <Box sx={{ marginRight: 2, color: "black" }}>{contact.icon}</Box>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Typography
                 variant="h6"
-                sx={{ color: "black", textAlign: "left" }} 
+                sx={{ color: "black", textAlign: "left" }}
               >
                 {contact.label}:
               </Typography>
@@ -122,7 +118,7 @@ const Contact = () => {
               >
                 <Typography
                   variant="body1"
-                  sx={{ color: "black", textAlign: "left" }} o
+                  sx={{ color: "black", textAlign: "left" }}
                 >
                   {contact.value}
                 </Typography>
@@ -137,15 +133,14 @@ const Contact = () => {
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           gap: 4,
-          width: "100%", 
+          width: "100%",
         }}
       >
         <Box
           sx={{
             width: { xs: "80%", sm: "50%" },
             margin: { xs: "0 auto", sm: 0 },
-            marginLeft: { sm: "20px" }, 
-           
+            marginLeft: { sm: "20px" },
           }}
         >
           <Form
@@ -154,10 +149,13 @@ const Contact = () => {
             handleSubmit={handleSubmit}
           />
         </Box>
+      
         <Box
           sx={{
             width: { xs: "90%", sm: "50%" },
-            margin: { xs: "0 auto", sm: 0 },
+            margin: { xs: "0 auto", sm: 0 }, 
+           
+
           }}
         >
           <Typography variant="h6" component="h2" gutterBottom>
@@ -165,7 +163,11 @@ const Contact = () => {
           </Typography>
           <div
             ref={mapContainer}
-            style={{ width: "80%", height: 400, borderRadius: 2 }}
+            style={{
+              width: "100%", 
+              height: 400,
+              borderRadius: 2,
+            }}
           />
         </Box>
       </Box>
@@ -177,4 +179,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

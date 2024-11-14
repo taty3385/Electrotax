@@ -1,18 +1,34 @@
 
+
+
 import { Box, Button, Typography } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
 import electricidad from "../assets/electricidad.jpg";
 import aireAcondicionado from "../assets/aireAcondicionado.jpg";
 import limpiaInjectores from "../assets/limpia inyectores.jpg";
+import { useEffect } from 'react';
+import anime from 'animejs';
 
 export default function CarruselPlay() {
   const imagenes = [aireAcondicionado, limpiaInjectores, electricidad];
   const whatsappLink = "https://wa.me/541123543337";
 
+ 
+  useEffect(() => {
+    anime({
+      targets: '.electrotax-text', 
+      translateX: ['-1000%', '0%'],  
+      easing: 'easeOutQuad',        
+      duration: 2000,               
+      delay: 500,     
+      loop: false, 
+    });
+  }, []);
+
   return (
     <Box sx={{ height: "70vh", width: "100%", maxWidth: "100vw" }}>
-      <Carousel autoPlay infiniteLoop showThumbs={false} interval={3000} showIndicators={false} r >
+      <Carousel autoPlay infiniteLoop showThumbs={false} interval={3000} showIndicators={false}>
         {imagenes.map((imagen, index) => (
           <Box key={index} sx={{ position: 'relative', height: "70vh" }}>
             <img src={imagen} alt={`Imagen ${index}`} style={{ height: "100%", width: "100%", objectFit: 'cover' }} />
@@ -34,7 +50,11 @@ export default function CarruselPlay() {
                   padding: 2,
                 }}
               >
-                <Typography variant="h4" gutterBottom>
+                <Typography 
+                  variant="h4" 
+                  gutterBottom 
+                  className="electrotax-text"  
+                >
                   Electrotax
                 </Typography>
                 <Typography variant="h6" gutterBottom>

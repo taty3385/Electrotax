@@ -19,7 +19,7 @@ import alternador from "../assets/alternador.jpg";
 import alternador2 from "../assets/alternador2.jpg";
 
 export default function Detail() {
-  const { id, collectionName } = useParams();
+  const { id } = useParams();
   const {
     getProductById,
     productDetail,
@@ -28,18 +28,18 @@ export default function Detail() {
     formData,
     handleSubmit,
     formatDescription,
+    collectionName,
+    textColor,
+    backgroundImage,
+    isServiceCategory,
+    isElectricidadAutomotor
   } = useTax();
 
   useEffect(() => {
     getProductById(collectionName, id);
   }, [id, collectionName, getProductById]);
 
-  const backgroundImage =
-    productDetail && productDetail.image ? `url(${productDetail.image})` : "";
-  const isServiceCategory = collectionName === "Servicio";
-  const isElectricidadAutomotor =
-    productDetail?.category?.trim() === "Electricidad automotor";
-  const textColor = isServiceCategory ? "#fff" : "white";
+  
 
   return (
     <Box
