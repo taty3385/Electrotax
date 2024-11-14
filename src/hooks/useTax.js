@@ -198,7 +198,7 @@ const initializeMap = (container) => {
 const backgroundImage =
    productDetail && productDetail.image ? `url(${productDetail.image})` : "";
   const isServiceCategory = collectionName === "Servicio" || collectionName === "aboutus";
-  console.log(isServiceCategory)
+  
 
   const isElectricidadAutomotor =
     productDetail?.category?.trim() === "Electricidad automotor";
