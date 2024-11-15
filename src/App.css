@@ -1,0 +1,21 @@
+.slick-prev,
+.slick-next {
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  color: rgb(56, 55, 55); /* Cambia el color de las flechas */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  color: rgb(56, 55, 55);
+}
+
+.slick-prev {
+  left: 20px; /* Ajusta la distancia desde el borde izquierdo */
+}
+
+.slick-next {
+  right: 10px; /* Ajusta la distancia desde el borde derecho */
+}

@@ -26,6 +26,7 @@ const Contact = () => {
         minWidth: "98vw",
         display: "flex",
         flexDirection: "column",
+         backgroundColor:"#555a5a"
       }}
     >
       <Box

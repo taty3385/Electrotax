@@ -17,10 +17,13 @@ import { TbAirConditioning } from "react-icons/tb";
 import { FaCarBattery, FaCar, FaArrowRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../App.css";
+import useTax from "../hooks/useTax";
 
 export default function Home() {
   const Img = [Honda, MercedesBenz, Peugeot, Renault, Toyota, Volkswagen];
   const [showAll, setShowAll] = useState(false);
+  const { textColor } = useTax();
 
   const comments = [
     {
@@ -72,7 +75,7 @@ export default function Home() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -80,7 +83,7 @@ export default function Home() {
   };
 
   return (
-    <Box sx={{ height: "100%" }}>
+    <Box sx={{ height: "100%", backgroundColor: "#555a5a" }}>
       <CarruselPlay />
 
       <Box
@@ -157,7 +160,6 @@ export default function Home() {
           </Typography>
         </Box>
       </Box>
-    
 
       <Box
         sx={{
@@ -165,29 +167,20 @@ export default function Home() {
           flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-around",
           alignItems: "center",
-
           marginTop: "2rem",
           width: "100%",
         }}
       >
         <Box
           sx={{
-            width: { xs: "80%", sm: "80%", md:"50%" },
-            minHeight: "500px",
-            height: "300px",
+            width: { xs: "80%", md: "45%" },
+            paddingRight: "3px",
             display: "flex",
             flexDirection: "column",
+            alignItems: "center", // Centra el texto en la columna
+            marginBottom: "50px",
           }}
         >
-          <CardMedia
-            component="img"
-            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-            image={taller}
-            alt="Taller"
-          />
-        </Box>
-
-        <Box sx={{ width: { xs: "80%", md: "45%" }, paddingRight: "3px" }}>
           <Typography
             variant="h4"
             sx={{
@@ -195,6 +188,7 @@ export default function Home() {
               marginBottom: "1rem",
               fontWeight: "bold",
               fontSize: { xs: "1.5rem", sm: "2rem" },
+              color: { textColor },
             }}
           >
             Sobre nosotros
@@ -203,6 +197,7 @@ export default function Home() {
             sx={{
               fontSize: { xs: "0.8rem", sm: "1rem" },
               lineHeight: { xs: "1.4", sm: "1.6" },
+              color: { textColor },
             }}
           >
             Bienvenido a nuestro taller de mecánica y electricidad, donde la
@@ -212,26 +207,26 @@ export default function Home() {
             vehículos y en la instalación de sistemas de aire acondicionado para
             todo tipo de autos. Nuestro equipo de técnicos altamente capacitados
             y certificados se dedica a ofrecer soluciones rápidas, efectivas y a
-            precios competitivos. Ya sea que tu vehículo necesite una reparación
-            compleja o un simple mantenimiento, estamos aquí para ayudarte con
-            una atención personalizada y un enfoque detallado en cada trabajo
-            que realizamos. Nos enorgullece utilizar tecnología avanzada y
-            herramientas de diagnóstico de última generación para asegurarnos de
-            que cada reparación se realice de manera eficiente y precisa.
-            Además, contamos con una amplia gama de repuestos y accesorios de
-            alta calidad para garantizar la durabilidad y el rendimiento de tu
-            vehículo. En nuestro taller, la satisfacción del cliente es nuestra
-            prioridad. Nos esforzamos por crear una relación de confianza con
-            cada uno de nuestros clientes, ofreciendo transparencia en nuestros
-            procesos y explicaciones claras sobre las necesidades y el estado de
-            sus vehículos. Ven y descubre por qué somos el taller de mecánica y
-            electricidad preferido por tantos conductores. Te invitamos a
-            visitar nuestras instalaciones y a experimentar el servicio
-            excepcional que nos distingue. Estamos aquí para mantener tu
-            vehículo en las mejores condiciones y asegurarte un viaje seguro y
-            confortable.
+            precios competitivos.
           </Typography>
         </Box>
+
+
+
+
+        <Box
+          sx={{
+            width: { xs: "80%", sm: "80%", md: "50%" },
+            minHeight: "500px",
+            height: "300px",
+            display: "flex",
+            flexDirection: "column",
+            borderRadius: "16px", 
+            backgroundImage: `url(${taller})`, 
+            backgroundSize: "cover",
+            backgroundPosition: "center", 
+          }}
+        ></Box>
       </Box>
 
       <Box
@@ -239,20 +234,33 @@ export default function Home() {
           marginTop: "2rem",
           textAlign: "center",
           backgroundColor: "rgb(255, 243, 43)",
-          width: "100%",
+          width: "99%",
         }}
       >
         <Typography
           color="black"
           variant="h5"
           gutterBottom
-          sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" }, pt: "1rem" }} 
+          sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" }, pt: "1rem" }}
         >
           Las marcas que trabajamos
         </Typography>
 
-        <Box sx={{ padding: "1rem", width: "95vw" }}>
-          <Slider {...settings}>
+        <Box sx={{ padding: "0.5rem", width: "95vw" }}>
+          <Slider
+            {...settings}
+            sx={{
+              ".slick-prev, .slick-next": {
+                zIndex: 2,
+                width: "30px",
+                height: "30px",
+                "&:before": {
+                  fontSize: "30px",
+                  color: "black", 
+                },
+              },
+            }}
+          >
             {Img.map((imagen, index) => (
               <Box
                 key={index}
@@ -304,10 +312,10 @@ export default function Home() {
                 key={index}
                 sx={{
                   width: { xs: "70%", sm: "45%", md: "30%" },
-                  padding:"5px",
+                  padding: "5px",
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   textAlign: "center",
-                  borderRadius:"7px"
+                  borderRadius: "7px",
                 }}
               >
                 <StarRatings
@@ -323,6 +331,7 @@ export default function Home() {
                     marginBottom: "1rem",
                     marginTop: "1rem",
                     fontSize: { xs: "0.8rem", sm: "1rem" },
+                    color: { textColor },
                   }}
                 >
                   "{comment.text}"
@@ -334,7 +343,6 @@ export default function Home() {
                 >
                   {comment.author}
                 </Typography>
-               
               </Box>
             ))}
         </Box>
@@ -354,6 +362,7 @@ export default function Home() {
                 alignItems: "center",
                 marginBottom: "30px",
                 marginTop: "10px",
+                color: { textColor },
               }}
               onClick={() => setShowAll(!showAll)}
             >

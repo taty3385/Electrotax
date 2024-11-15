@@ -48,7 +48,7 @@ export default function Detail() {
 
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: "98vw",
+        width: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -209,7 +209,7 @@ export default function Detail() {
               <Box
                 sx={{
                   marginTop: 4,
-                  width: "100%",
+                  width: "98%",
                   display: "flex",
                   flexDirection: "row",
                   gap: "1rem",

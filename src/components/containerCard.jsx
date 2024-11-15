@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Box, CircularProgress, Typography } from "@mui/material";
 import Cards from "./Cards";
 import useTax from "../hooks/useTax";
-import WhatSapp from "../views/whatSapp";  
+import WhatSapp from "../views/whatSapp";
 
 export default function ContainerCard() {
   const { products, getDocument, loading, category, getTitle } = useTax();
@@ -15,15 +15,15 @@ export default function ContainerCard() {
 
   return (
     <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      width: "98vw",
-      marginBottom: "30px",
-      minHeight: "80vh", 
-      paddingBottom: "50px", 
-    }}
-  >
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        minHeight: "100vh",
+        paddingBottom: "50px",
+        backgroundColor: "#555a5a",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -40,7 +40,7 @@ export default function ContainerCard() {
             backgroundColor: "yellow",
           }}
         />
-        <Typography variant="h4" sx={{ textAlign: "center", mb:"10px" }}>
+        <Typography variant="h4" sx={{ textAlign: "center", mb: "10px" }}>
           {getTitle()}
         </Typography>
         <Box
@@ -61,7 +61,7 @@ export default function ContainerCard() {
           justifyContent: "center",
           gap: 2,
           padding: 2,
-        
+
           "@media (max-width: 567px)": {
             flexDirection: "column",
           },
@@ -87,7 +87,15 @@ export default function ContainerCard() {
           <Typography variant="h6">No se encontraron productos</Typography>
         )}
       </Box>
-      <WhatSapp />
+      <Box
+        sx={{
+          backgroundColor: "#555a5a", 
+          width: "100%",
+          padding: "20px 0", 
+        }}
+      >
+        <WhatSapp />
+      </Box>
     </Box>
   );
 }

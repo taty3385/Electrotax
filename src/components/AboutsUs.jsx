@@ -15,10 +15,10 @@ import manoMecanico from "../assets/manosMecanica.jpg";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 export default function AboutUs() {
-  const { formData, handleChange, handleSubmit,textColor } = useTax();
+  const { formData, handleChange, handleSubmit, textColor } = useTax();
 
   return (
-    <Box sx={{ color: "black", width: "100%" }}>
+    <Box sx={{ color: "black", backgroundColor: "#555a5a" }}>
       <Box
         sx={{
           position: "relative",
@@ -108,10 +108,10 @@ export default function AboutUs() {
                 backgroundColor: "#f9f9f9",
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center", // Centra el contenido horizontalmente
-                justifyContent: "center", // Centra el contenido verticalmente
-                width: "80%", // Ajuste de ancho para móviles
-                margin: "0 auto", // Centra el Paper en la pantalla
+                alignItems: "center", 
+                justifyContent: "center", 
+                width: "80%", 
+                margin: "0 auto", 
               }}
             >
               <Typography
@@ -235,6 +235,7 @@ export default function AboutUs() {
             width: { md: "100% ", xs: "90%" },
             display: "flex",
             justifyContent: "center",
+            backgroundColor: "#555a5a",
           }}
         >
           <Box
@@ -243,6 +244,7 @@ export default function AboutUs() {
               maxWidth: "800px",
               padding: "0 2rem",
               boxSizing: "border-box",
+              backgroundColor: "#555a5a",
             }}
           >
             <Form
@@ -250,12 +252,24 @@ export default function AboutUs() {
               handleChange={handleChange}
               handleSubmit={handleSubmit}
               textColor={textColor}
+              sx={{ backgroundColor: "#555a5a" }}
             />
           </Box>
         </Box>
       </Box>
 
-      <Box sx={{ marginTop: "4rem" }}>
+      
+
+      <Box
+        sx={{
+          marginTop: "4rem",
+          backgroundColor: "#555a5a", 
+          display: "flex",
+          justifyContent: "center", 
+          alignItems: "center", 
+          padding: "2rem", 
+        }}
+      >
         <WhatSapp />
       </Box>
     </Box>

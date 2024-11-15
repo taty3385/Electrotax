@@ -28,7 +28,7 @@ export default function CarruselPlay() {
 
   return (
     <Box sx={{ height: "70vh", width: "100%", maxWidth: "100vw" }}>
-      <Carousel autoPlay infiniteLoop showThumbs={false} interval={3000} showIndicators={false}>
+      <Carousel autoPlay infiniteLoop showThumbs={false} interval={3000} showIndicators={false} emulateTouch={false} showStatus={false} >
         {imagenes.map((imagen, index) => (
           <Box key={index} sx={{ position: 'relative', height: "70vh" }}>
             <img src={imagen} alt={`Imagen ${index}`} style={{ height: "100%", width: "100%", objectFit: 'cover' }} />

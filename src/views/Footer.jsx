@@ -23,7 +23,7 @@ export default function Footer() {
         <Grid item xs={12} sm={2}>
           <Typography
             variant="h6"
-            sx={{ fontSize: { xs: "1rem", sm: "1.25rem", color: "black" } }}
+            sx={{ fontSize: { xs: "1.3rem", sm: "1.25rem", color: "black" } }}
           >
             Navegación
           </Typography>
@@ -94,7 +94,14 @@ export default function Footer() {
               target="_blank"
               color="inherit"
             >
-              <FacebookIcon sx={{ background:"blue", color: "white" , borderRadius: "50%",padding: "8px", }} />
+              <FacebookIcon
+                sx={{
+                  background: "blue",
+                  color: "white",
+                  borderRadius: "50%",
+                  padding: "8px",
+                }}
+              />
             </IconButton>
             <IconButton
               href="https://www.instagram.com/electrotax.relojeria/"
@@ -117,32 +124,40 @@ export default function Footer() {
         <Grid item xs={12} sm={4} md={4}>
           <Typography
             variant="h6"
-            sx={{ fontSize: { xs: "1rem", sm: "1.25rem", color: "black" } }}
+            sx={{ fontSize: { xs: "1.3rem", sm: "1.25rem", color: "black", margin:"2px" } }}
           >
             Servicio al cliente
           </Typography>
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } }}
+            sx={{
+              fontSize: { xs: "0.75rem", sm: "0.875rem" },
+              color: "black",
+              width: { xs: "85%" }, 
+               margin:"2px",
+           
+               textAlign:"center",
+               marginLeft:{xs:"18px"}
+            }}
           >
             Dirección: Av. Chiclana 3715, C1262AAB Cdad. Autónoma de Buenos
             Aires
           </Typography>
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } }}
+            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } , margin:"2px"}}
           >
             Teléfono: (+54 9) 11 2354-3337
           </Typography>
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } }}
+            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } , margin:"2px"}}
           >
             Email: electrotax@live.com.ar
           </Typography>
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } }}
+            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black", margin:"2px" } }}
           >
             Horario: Lunes a Viernes, 9:00 AM - 7:00 PM
           </Typography>
@@ -151,11 +166,11 @@ export default function Footer() {
         <Grid item xs={12} sm={3} md={3}>
           <Typography
             variant="h6"
-            sx={{ fontSize: { xs: "1rem", sm: "1.25rem", color: "black" } }}
+            sx={{ fontSize: { xs: "1,3rem", sm: "1.25rem", color: "black" } }}
           >
             Medios de pago
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 2 , marginBottom:"10px" }}>
             <img src={Visa} alt="Visa" style={{ width: 40, height: 40 }} />
             <img
               src={Mastercard}
@@ -173,6 +188,7 @@ export default function Footer() {
               style={{ width: 40, height: 40 }}
             />
           </Box>
+          <Box sx={{heigth:"100px"}} ></Box>
         </Grid>
       </Grid>
     </Box>

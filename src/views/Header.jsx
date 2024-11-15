@@ -44,8 +44,11 @@ export default function Header() {
       <Container
         sx={{
           display:"flex", 
-       
-          flexDirection: { md: "column", sm: "row" },
+         flexDirection: { md: "column", sm: "row" },
+         padding: {xs: "2px"},
+         width: {xs: "87%"},
+      
+         margin: {xs: "2px"},
         }}
       >
         <Box
@@ -76,7 +79,7 @@ export default function Header() {
                 letterSpacing: ".3rem",
                 color: "black",
                 textDecoration: "none",
-                fontSize: { xs: "1.5rem", md: "1.6rem" },
+                fontSize: { xs: "1.3rem", md: "1.6rem" },
               }}
             >
               Electrotax
@@ -87,7 +90,8 @@ export default function Header() {
             variant="body2"
             sx={{
               color: "black",
-              fontSize: { xs: "1.3rem", md: "1rem" },
+              fontSize: { xs: "1.2rem", md: "1rem" },
+              display:{ sm:"block" , xs:"none"}
             }}
           >
             Relojería de taxi/ Mecanica gral.
