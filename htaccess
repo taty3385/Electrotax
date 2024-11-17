@@ -1,16 +1,12 @@
 AddType application/javascript .js
 
-
 Options -MultiViews
 RewriteEngine On
 
+# Si no es un archivo físico
 RewriteCond %{REQUEST_FILENAME} !-f
+# Si no es un directorio
 RewriteCond %{REQUEST_FILENAME} !-d
 
-
+# Redirige todo a index.html
 RewriteRule ^ index.html [QSA,L]
-
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE image/jpeg image/png image/svg+xml
-</IfModule>
-

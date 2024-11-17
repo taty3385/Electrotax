@@ -188,7 +188,7 @@ export default function Home() {
               marginBottom: "1rem",
               fontWeight: "bold",
               fontSize: { xs: "1.5rem", sm: "2rem" },
-              color: { textColor },
+              color: "white",
             }}
           >
             Sobre nosotros
@@ -197,7 +197,7 @@ export default function Home() {
             sx={{
               fontSize: { xs: "0.8rem", sm: "1rem" },
               lineHeight: { xs: "1.4", sm: "1.6" },
-              color: { textColor },
+              color: "white",
             }}
           >
             Bienvenido a nuestro taller de mecánica y electricidad, donde la
@@ -331,14 +331,14 @@ export default function Home() {
                     marginBottom: "1rem",
                     marginTop: "1rem",
                     fontSize: { xs: "0.8rem", sm: "1rem" },
-                    color: { textColor },
+                    color: "white",
                   }}
                 >
                   "{comment.text}"
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "0.8rem", sm: "1rem" },
+                    fontSize: { xs: "0.8rem", sm: "1rem" ,color:"white" },
                   }}
                 >
                   {comment.author}
@@ -362,7 +362,7 @@ export default function Home() {
                 alignItems: "center",
                 marginBottom: "30px",
                 marginTop: "10px",
-                color: { textColor },
+                color: "white",
               }}
               onClick={() => setShowAll(!showAll)}
             >

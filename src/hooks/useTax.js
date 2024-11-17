@@ -202,7 +202,7 @@ const backgroundImage =
 
   const isElectricidadAutomotor =
     productDetail?.category?.trim() === "Electricidad automotor";
-  const textColor = isServiceCategory ? "#fff" : "white";
+
 
  
   return {
@@ -227,7 +227,7 @@ const backgroundImage =
     isServiceCategory,
     isElectricidadAutomotor,
     collectionName,
-    textColor,
+
   };
 }
 

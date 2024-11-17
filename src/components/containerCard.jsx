@@ -40,7 +40,7 @@ export default function ContainerCard() {
             backgroundColor: "yellow",
           }}
         />
-        <Typography variant="h4" sx={{ textAlign: "center", mb: "10px" }}>
+        <Typography variant="h4" sx={{ textAlign: "center", mb: "10px" ,color:"white" }}>
           {getTitle()}
         </Typography>
         <Box

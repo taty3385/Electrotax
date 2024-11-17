@@ -9,7 +9,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import useTax from "../hooks/useTax";
 
-const Form = ({ textColor }) => {
+const Form = () => {
   const {
     formData,
     handleChange,
@@ -25,7 +25,7 @@ const Form = ({ textColor }) => {
         variant="h6"
         component="h2"
         gutterBottom
-        sx={{ color: textColor }}
+        sx={{ color: "white" }}
       >
         Formulario de Contacto
       </Typography>

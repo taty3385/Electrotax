@@ -159,7 +159,7 @@ const Contact = () => {
 
           }}
         >
-          <Typography variant="h6" component="h2" gutterBottom>
+          <Typography variant="h6" component="h2" gutterBottom sx={{color: "white"}}>
             Ubicación
           </Typography>
           <div
