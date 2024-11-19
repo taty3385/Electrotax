@@ -118,6 +118,7 @@ export default function Home() {
           <Typography
             sx={{
               fontSize: { xs: "0.8rem", sm: "1rem" },
+              fontFamily: "'Oswald', sans-serif",
             }}
           >
             Aire acondicionado
@@ -136,6 +137,7 @@ export default function Home() {
           <Typography
             sx={{
               fontSize: { xs: "0.8rem", sm: "1rem" },
+              fontFamily: "'Oswald', sans-serif",
             }}
           >
             Reparación de iluminación y batería
@@ -154,6 +156,7 @@ export default function Home() {
           <Typography
             sx={{
               fontSize: { xs: "0.8rem", sm: "1rem" },
+              fontFamily: "'Oswald', sans-serif",
             }}
           >
             Diagnóstico y reparación automotriz
@@ -189,15 +192,18 @@ export default function Home() {
               fontWeight: "bold",
               fontSize: { xs: "1.5rem", sm: "2rem" },
               color: "white",
+              fontFamily: "'Oswald', sans-serif",
             }}
           >
             Sobre nosotros
           </Typography>
           <Typography
             sx={{
-              fontSize: { xs: "0.8rem", sm: "1rem" },
+              fontSize: { xs: "0.8rem", sm: "1.2rem" },
               lineHeight: { xs: "1.4", sm: "1.6" },
               color: "white",
+              fontFamily: "'Asap Condensed', sans-serif",
+             
             }}
           >
             Bienvenido a nuestro taller de mecánica y electricidad, donde la
@@ -211,8 +217,7 @@ export default function Home() {
           </Typography>
         </Box>
 
-
-
+       
 
         <Box
           sx={{
@@ -241,7 +246,7 @@ export default function Home() {
           color="black"
           variant="h5"
           gutterBottom
-          sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" }, pt: "1rem" }}
+          sx={{ fontSize: { xs: "1.2rem", sm: "1.7rem" }, pt: "1rem", fontFamily: "'Oswald', sans-serif", }}
         >
           Las marcas que trabajamos
         </Typography>
@@ -290,9 +295,10 @@ export default function Home() {
           variant="h5"
           gutterBottom
           sx={{
-            fontSize: { xs: "1.2rem", sm: "1.5rem" },
+            fontSize: { xs: "1.2rem", sm: "1.7rem" },
             pt: "0.5rem",
             pb: "1rem",
+            fontFamily: "'Oswald', sans-serif",
           }}
         >
           Lo que dicen nuestros clientes

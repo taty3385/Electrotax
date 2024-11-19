@@ -8,6 +8,8 @@ import ContainerCard from "./components/containerCard";
 import Footer from "./views/Footer";
 import Detail from "./views/Detail";
 
+
+
 function App() {
   return (
     <BrowserRouter>

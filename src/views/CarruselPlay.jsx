@@ -51,13 +51,14 @@ export default function CarruselPlay() {
                 }}
               >
                 <Typography 
-                  variant="h4" 
+                  variant="h3" 
                   gutterBottom 
-                  className="electrotax-text"  
+                  className="electrotax-text" 
+                  sx={{fontFamily: "'Oswald', sans-serif"}}
                 >
                   Electrotax
                 </Typography>
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" gutterBottom sx={{fontFamily: "'Oswald', sans-serif",}}>
                   Reserva tu turno
                 </Typography>
                 <Button
@@ -65,6 +66,7 @@ export default function CarruselPlay() {
                   sx={{
                     backgroundColor: "rgb(255, 243, 43)",
                     color: 'black',
+                    fontFamily: "'Oswald', sans-serif",
                     '&:hover': {
                       backgroundColor: 'darkorange', 
                     },

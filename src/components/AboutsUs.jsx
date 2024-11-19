@@ -42,6 +42,7 @@ export default function AboutUs() {
             padding: "1rem",
             borderRadius: "10px",
             background: "rgba(0, 0, 0, 0.5)",
+            fontFamily: "'Oswald', sans-serif",
           }}
         >
           Quiénes Somos
@@ -73,15 +74,16 @@ export default function AboutUs() {
                   textAlign: "center",
                   mb: "15px",
                   fontSize: "1.7rem",
+                  fontFamily: "'Oswald', sans-serif",
                 }}
               >
-                En Electotax
+                En Electrotax
               </Typography>
-              <Typography sx={{ marginBottom: "1rem" }}>
+              <Typography sx={{ marginBottom: "1rem", fontFamily: "'Asap Condensed', sans-serif" }}>
                 Somos un taller mecánico con 30 años de experiencia y dedicación
                 en la reparación y mantenimiento de automóviles...
               </Typography>
-              <Typography>
+              <Typography sx={{ fontFamily: "'Asap Condensed', sans-serif"}}>
                 Nuestra misión es proporcionar a nuestros clientes soluciones
                 confiables y eficaces para sus vehículos...
               </Typography>
@@ -121,16 +123,17 @@ export default function AboutUs() {
                   fontWeight: "bold",
                   textAlign: "center",
                   mb: "15px",
+                  fontFamily: "'Oswald', sans-serif",
                 }}
               >
                 Nuestros Servicios
               </Typography>
               <Grid container spacing={2} sx={{ justifyContent: "center" }}>
                 <Grid item xs={11} md={4}>
-                  <Typography variant="h6" sx={{ mb: 1 }}>
+                  <Typography variant="h6" sx={{ mb: 1 ,fontFamily: "'Oswald', sans-serif",}}>
                     Reparación de Automóviles
                   </Typography>
-                  <List sx={{ paddingLeft: 0 }}>
+                  <List sx={{paddingLeft: 0, fontFamily: "'Asap Condensed', sans-serif"}}>
                     {[
                       "Diagnóstico y reparación automotrices",
                       "Mantenimiento preventivo y correctivo",
@@ -151,7 +154,7 @@ export default function AboutUs() {
                   </List>
                 </Grid>
                 <Grid item xs={11} md={4}>
-                  <Typography variant="h6" sx={{ mb: 1 }}>
+                  <Typography variant="h6" sx={{ mb: 1,fontFamily: "'Oswald', sans-serif", }}>
                     Instalación de Aire Acondicionado
                   </Typography>
                   <List sx={{ paddingLeft: 0 }}>
@@ -175,7 +178,7 @@ export default function AboutUs() {
                   </List>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                  <Typography variant="h6" sx={{ mb: 1 }}>
+                  <Typography variant="h6" sx={{ mb: 1,fontFamily: "'Oswald', sans-serif", }}>
                     Servicios de Electricidad Automotriz
                   </Typography>
                   <List sx={{ paddingLeft: 0 }}>
@@ -225,7 +228,7 @@ export default function AboutUs() {
             boxSizing: "border-box",
           }}
         >
-          <Typography variant="h4">
+          <Typography variant="h4" sx={{fontFamily: "'Oswald', sans-serif"}}>
             COMPLETA EL FORMULARIO Y DEJANOS TUS DATOS. El equipo de atención al
             cliente se pondrá en contacto en el plazo de 24 hs.
           </Typography>

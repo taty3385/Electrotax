@@ -53,6 +53,7 @@ const Contact = () => {
             padding: "1rem",
             borderRadius: "10px",
             background: "rgba(0, 0, 0, 0.5)",
+            fontFamily: "'Oswald', sans-serif",
           }}
         >
           Quiénes Somos
@@ -107,7 +108,7 @@ const Contact = () => {
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Typography
                 variant="h6"
-                sx={{ color: "black", textAlign: "left" }}
+                sx={{ color: "black", textAlign: "left", fontFamily: "'Oswald', sans-serif", }}
               >
                 {contact.label}:
               </Typography>
@@ -115,11 +116,11 @@ const Contact = () => {
                 href={contact.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "black", textDecoration: "none" }}
+                style={{ color: "black", textDecoration: "none" , fontFamily: "'Asap Condensed', sans-serif", }}
               >
                 <Typography
                   variant="body1"
-                  sx={{ color: "black", textAlign: "left" }}
+                  sx={{ color: "black", textAlign: "left", fontFamily: "'Asap Condensed', sans-serif", }}
                 >
                   {contact.value}
                 </Typography>
@@ -159,7 +160,7 @@ const Contact = () => {
 
           }}
         >
-          <Typography variant="h6" component="h2" gutterBottom sx={{color: "white"}}>
+          <Typography variant="h6" component="h2" gutterBottom sx={{color: "white", fontFamily: "'Oswald', sans-serif",}}>
             Ubicación
           </Typography>
           <div

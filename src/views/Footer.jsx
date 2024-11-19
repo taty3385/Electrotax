@@ -23,7 +23,7 @@ export default function Footer() {
         <Grid item xs={12} sm={2}>
           <Typography
             variant="h6"
-            sx={{ fontSize: { xs: "1.3rem", sm: "1.25rem", color: "black" } }}
+            sx={{ fontSize: { xs: "1.3rem", sm: "1.25rem", color: "black", fontFamily: "'Oswald', sans-serif", } }}
           >
             Navegación
           </Typography>
@@ -32,7 +32,8 @@ export default function Footer() {
               <Typography
                 variant="body1"
                 sx={{
-                  fontSize: { xs: "0.875rem", sm: "1rem", color: "black" },
+                  fontSize: { xs: "0.875rem", sm: "1rem" },
+                  color: "black",  fontFamily: "'Asap Condensed', sans-serif",
                 }}
               >
                 Home
@@ -46,7 +47,7 @@ export default function Footer() {
             >
               <Typography
                 variant="body1"
-                sx={{ fontSize: { xs: "0.875rem", sm: "1rem" } }}
+                sx={{ fontSize: { xs: "0.875rem", sm: "1rem" },fontFamily: "'Asap Condensed', sans-serif" }}
               >
                 Productos
               </Typography>
@@ -59,7 +60,7 @@ export default function Footer() {
             >
               <Typography
                 variant="body1"
-                sx={{ fontSize: { xs: "0.875rem", sm: "1rem" } }}
+                sx={{ fontSize: { xs: "0.875rem", sm: "1rem" } , fontFamily: "'Asap Condensed', sans-serif", }}
               >
                 Servicios
               </Typography>
@@ -72,7 +73,7 @@ export default function Footer() {
             >
               <Typography
                 variant="body1"
-                sx={{ fontSize: { xs: "0.875rem", sm: "1rem" } }}
+                sx={{ fontSize: { xs: "0.875rem", sm: "1rem" },  fontFamily: "'Asap Condensed', sans-serif", }}
               >
                 Contacto
               </Typography>
@@ -84,7 +85,7 @@ export default function Footer() {
         <Grid item xs={12} sm={3} md={3}>
           <Typography
             variant="h6"
-            sx={{ fontSize: { xs: "1rem", sm: "1.25rem", color: "black" } }}
+            sx={{ fontSize: { xs: "1rem", sm: "1.25rem", color: "black" }, fontFamily: "'Oswald', sans-serif", }}
           >
             Seguinos
           </Typography>
@@ -124,7 +125,7 @@ export default function Footer() {
         <Grid item xs={12} sm={4} md={4}>
           <Typography
             variant="h6"
-            sx={{ fontSize: { xs: "1.3rem", sm: "1.25rem", color: "black", margin:"2px" } }}
+            sx={{ fontSize: { xs: "1.3rem", sm: "1.25rem", color: "black", margin:"2px" }, fontFamily: "'Oswald', sans-serif", }}
           >
             Servicio al cliente
           </Typography>
@@ -135,7 +136,7 @@ export default function Footer() {
               color: "black",
               width: { xs: "85%" }, 
                margin:"2px",
-           
+            fontFamily: "'Asap Condensed', sans-serif",
                textAlign:"center",
                marginLeft:{xs:"18px"}
             }}
@@ -145,19 +146,19 @@ export default function Footer() {
           </Typography>
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } , margin:"2px"}}
+            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } , margin:"2px", fontFamily: "'Asap Condensed', sans-serif"}}
           >
             Teléfono: (+54 9) 11 2354-3337
           </Typography>
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } , margin:"2px"}}
+            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black" } , margin:"2px", fontFamily: "'Asap Condensed', sans-serif"}}
           >
             Email: electrotax@live.com.ar
           </Typography>
           <Typography
             variant="body2"
-            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem", color: "black", margin:"2px" } }}
+            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem"  } ,color: "black", margin:"2px",  fontFamily: "'Asap Condensed', sans-serif",}}
           >
             Horario: Lunes a Viernes, 9:00 AM - 7:00 PM
           </Typography>
@@ -166,7 +167,7 @@ export default function Footer() {
         <Grid item xs={12} sm={3} md={3}>
           <Typography
             variant="h6"
-            sx={{ fontSize: { xs: "1,3rem", sm: "1.25rem", color: "black" } }}
+            sx={{ fontSize: { xs: "1,3rem", sm: "1.25rem" } ,fontFamily: "'Oswald', sans-serif",color: "black"  }}
           >
             Medios de pago
           </Typography>

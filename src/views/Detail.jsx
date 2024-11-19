@@ -123,22 +123,15 @@ export default function Detail() {
             >
               <Typography
                 gutterBottom
-                variant="h5"
+                variant="h4"
                 component="div"
                 sx={{ textAlign: "center", color: "#fff" }}
               >
                 {productDetail.nombre}
               </Typography>
-              <Typography
-                gutterBottom
-                variant="h5"
-                component="div"
-                sx={{ color: "#fff", textalign: "left", width: "100%" }}
-              >
-                Descripción
-              </Typography>
+             
               {!isServiceCategory ? (
-                <List sx={{ width: "100%", color: "#fff" }}>
+                <List sx={{ width: "100%", color: "#fff", fontFamily: "'Asap Condensed', sans-serif" }}>
                   {productDetail.descripcion
                     ? formatDescription(productDetail.descripcion).map(
                         (line, index) => (
@@ -301,7 +294,7 @@ export default function Detail() {
                 sx={{
                   backgroundColor: "yellow",
                   color: "black",
-                  width: { md: "100% ", xs: "80%" },
+                  width: { md: "80% ", xs: "70%" },
                   padding: "1rem 2rem",
                   textAlign: "center",
                   marginBottom: "2rem",
@@ -310,7 +303,7 @@ export default function Detail() {
                   boxSizing: "border-box",
                 }}
               >
-                <Typography variant="h4">
+                <Typography variant="h4" sx={{ fontFamily: "'Oswald', sans-serif",}}>
                   COMPLETA EL FORMULARIO Y DEJANOS TUS DATOS. El equipo de
                   atención al cliente se pondrá en contacto en el plazo de 24
                   hs.

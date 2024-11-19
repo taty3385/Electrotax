@@ -100,6 +100,7 @@ export default function Cards({ image, nombre, id, collectionName }) {
             zIndex: 4, 
             color: "white",
             padding: "16px", 
+            fontFamily: "'Oswald', sans-serif"
           }}
         >
           {nombre}

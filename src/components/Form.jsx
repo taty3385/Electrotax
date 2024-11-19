@@ -25,7 +25,7 @@ const Form = () => {
         variant="h6"
         component="h2"
         gutterBottom
-        sx={{ color: "white" }}
+        sx={{ color: "white" , fontFamily: "'Oswald', sans-serif",}}
       >
         Formulario de Contacto
       </Typography>
@@ -183,7 +183,8 @@ const Form = () => {
                 fontSize: "0.75rem",
                 width: "fit-content",
                 minWidth: "150px",
-                color:"black"
+                color:"black",
+                fontFamily: "'Oswald', sans-serif",
               }}
             >
               Enviar
@@ -202,7 +203,7 @@ const Form = () => {
           <Typography>{errorMessage}</Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} color="primary" sx={{ fontFamily: "'Oswald', sans-serif",}}>
             Cerrar
           </Button>
         </DialogActions>

@@ -43,12 +43,12 @@ export default function Header() {
     >
       <Container
         sx={{
-          display:"flex", 
-         flexDirection: { md: "column", sm: "row" },
-         padding: {xs: "2px"},
-         width: {xs: "87%"},
-      
-         margin: {xs: "2px"},
+          display: "flex",
+          flexDirection: { md: "column", sm: "row" },
+          padding: { xs: "2px" },
+          width: { xs: "87%" },
+
+          margin: { xs: "2px" },
         }}
       >
         <Box
@@ -72,9 +72,8 @@ export default function Header() {
               }}
             />
             <Typography
-              variant="h6"
               sx={{
-                fontFamily: "monospace",
+                fontFamily: "'Sour Gummy', serif", // Comillas simples para el nombre de la fuente y la coma correcta
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "black",
@@ -91,7 +90,7 @@ export default function Header() {
             sx={{
               color: "black",
               fontSize: { xs: "1.2rem", md: "1rem" },
-              display:{ sm:"block" , xs:"none"}
+              display: { sm: "block", xs: "none" },
             }}
           >
             Relojería de taxi/ Mecanica gral.
@@ -202,6 +201,7 @@ export default function Header() {
                 color: "black",
                 display: "block",
                 textDecoration: "none",
+                fontFamily: "'Oswald', sans-serif",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
                 outline: "none",
@@ -230,6 +230,7 @@ export default function Header() {
                 display: "block",
                 textDecoration: "none",
                 position: "relative",
+                fontFamily: "'Oswald', sans-serif",
                 fontSize: { xs: "0.8rem", md: "1rem" },
                 outline: "none",
                 "&:hover": {
@@ -256,6 +257,7 @@ export default function Header() {
                 color: "black",
                 display: "block",
                 textDecoration: "none",
+                fontFamily: "'Oswald', sans-serif",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
                 outline: "none",
@@ -283,6 +285,7 @@ export default function Header() {
                 color: "black",
                 display: "block",
                 textDecoration: "none",
+                fontFamily: "'Oswald', sans-serif",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
                 outline: "none",
@@ -310,6 +313,7 @@ export default function Header() {
                 color: "black",
                 display: "block",
                 textDecoration: "none",
+                fontFamily: "'Oswald', sans-serif",
                 position: "relative",
                 fontSize: { xs: "0.8rem", md: "1rem" },
                 outline: "none",
